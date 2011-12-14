@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'eclipse'
 
 repositories {
   mavenCentral()
@@ -7,4 +8,11 @@ repositories {
 
 dependencies {
   testCompile 'junit:junit:4.8.2'
+}
+
+// keine fremden Abhängigkeiten zulassen (alles aus .classpath ueberschreiben)
+eclipse.classpath.file {
+    beforeMerged { classpath ->
+        classpath.entries.removeAll { entry -> entry.kind == 'lib' || entry.kind == 'var' }
+    }
 }

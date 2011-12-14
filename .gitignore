@@ -1,0 +1,9 @@
+bin/
+build/
+.gradle/
+gradle-sandbox.iml
+gradle-sandbox.ipr
+gradle-sandbox.iws
+.idea/gradle.xml
+.idea/workspace.xml
+.*~
