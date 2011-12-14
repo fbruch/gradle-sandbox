@@ -1,6 +1,8 @@
 bin/
 build/
 .gradle/
+.project
+.classpath
 gradle-sandbox.iml
 gradle-sandbox.ipr
 gradle-sandbox.iws
